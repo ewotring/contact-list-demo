@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/image.scss'
 
 class Image extends Component {
   constructor() {
@@ -35,12 +36,12 @@ class Image extends Component {
       return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
       return (
-        <div>Image not loaded</div>
-      )
-    } else {
-      return (
-        // <div>Image successfully loaded</div>
-        <img src={playerImageUrl} alt='player' />
+        <img src={require('../assets/ffffff.png')} alt='placeholder' />
+        )
+      } else {
+        return (
+          // <div>Image successfully loaded</div>
+          <img src={playerImageUrl} alt='player' />
       )
     }
   }

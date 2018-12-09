@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Image from './image'
 import Detail from './detail'
+import '../App.scss';
+import '../styles/list.scss'
+
 
 class List extends Component {
   constructor() {
@@ -31,33 +34,32 @@ class List extends Component {
   }
 
   render() {
-    // console.log(this.props.items);
-    // console.log(this.props.items.roster);
     let players = this.props.items.roster;
 
-    // return <div>lists, lists, lists!</div>
-    // create async image component and use here
-    // use separate component for content?
-    // Nope, the data for the image is a URL, so I can just do another fetch inside
-    // of the list component.
-    // Should I count on the image then loading into cache and passing that data to the
-    // detail view, or should I do another fetch in the detail view?
     if (!this.state.showDetail) {
       return (
         <ul>
           {players.map(player => (
             <li
               key = {player.name}
-              onClick = {event => {
-                this.showDetail(event, player)
-              }}
             >
-              <Image image_url = { player.image_url } />
-              <div>
-                Player Name: {player.name}
+              <div className='player-image'>
+                <Image image_url = { player.image_url } />
               </div>
-              <div>
-                Player Position: {player.position}
+              <div className='player-content'>
+                <div className='player-name'>
+                  Player Name: {player.name}
+                </div>
+                <div className='player-position'>
+                  Player Position: {player.position}
+                </div>
+                <button
+                  onClick = {event => {
+                    this.showDetail(event, player)
+                  }}
+                >
+                  Click here to view player detail
+                </button>
               </div>
             </li>
           ))}

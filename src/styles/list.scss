@@ -1,0 +1,26 @@
+ul {
+  list-style-type: none;
+  li {
+    // position: relative;
+    // overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1%;
+    background-color: #b3b3b3;
+    border-radius: 5px;
+    .player-image,
+    .placeholder-image {
+      // position: absolute;
+      // left: 0;
+      // float: left;
+      margin: 1%;
+    }
+    .player-content {
+      text-align: left;
+      padding: 2%;
+    }
+  }
+}

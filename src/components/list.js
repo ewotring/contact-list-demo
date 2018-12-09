@@ -3,8 +3,8 @@ import Image from './image'
 
 class List extends Component {
   render() {
-    console.log(this.props.items);
-    console.log(this.props.items.roster);
+    // console.log(this.props.items);
+    // console.log(this.props.items.roster);
     let players = this.props.items.roster;
 
     // return <div>lists, lists, lists!</div>
@@ -20,13 +20,10 @@ class List extends Component {
           <li
             key = {player.name}
           >
+            <Image image_url = { player.image_url } />
             <div>
               Player Name: {player.name}
             </div>
-            {/* <div>
-              Player Image: {player.image_url}
-            </div> */}
-            <Image image_url = { player.image_url } />
             <div>
               Player Position: {player.position}
             </div>

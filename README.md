@@ -1,3 +1,8 @@
+DEV NOTES:
+
+I realize that the detail view uses a lot of the same template as each list item. I chose not to
+factor all of the view responsibilities to the detail component for a couple of reasons. One reason was that I wanted to demonstrate using a callback function with state. The other main reason was that I wanted to leave the detail component independent to allow for future expansion for additional fields, if wanted.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

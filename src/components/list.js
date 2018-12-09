@@ -9,12 +9,24 @@ class List extends Component {
       showDetail: false,
       detailPlayer: []
     }
+
+    // this.showDetail = this.showDetail.bind(this);
+    // this.showList = this.showList.bind(this);
   }
 
-  handleClick = player => {
+  showDetail = (event, player) => {
+    event.preventDefault()
     this.setState({
       showDetail: true,
       detailPlayer: player
+    })
+  }
+
+  showList = (event) => {
+    event.preventDefault();
+    this.setState({
+      showDetail: false,
+      detailPlayer: []
     })
   }
 
@@ -37,8 +49,7 @@ class List extends Component {
             <li
               key = {player.name}
               onClick = {event => {
-                event.preventDefault();
-                this.handleClick(player)
+                this.showDetail(event, player)
               }}
             >
               <Image image_url = { player.image_url } />
@@ -54,7 +65,10 @@ class List extends Component {
       )
     } else {
       return (
-        <Detail player = { this.state.detailPlayer } />
+        <Detail
+          player = { this.state.detailPlayer }
+          returnToList = { this.showList }
+        />
       )
     }
   }

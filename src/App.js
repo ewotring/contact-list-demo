@@ -5,7 +5,7 @@ import List from './components/list'
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       error: null,
       isLoaded: false,

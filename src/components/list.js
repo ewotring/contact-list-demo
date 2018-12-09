@@ -42,6 +42,9 @@ class List extends Component {
           {players.map(player => (
             <li
               key = {player.name}
+              onClick = {event => {
+                this.showDetail(event, player)
+              }}
             >
               <div className='player-image'>
                 <Image image_url = { player.image_url } />
@@ -53,13 +56,9 @@ class List extends Component {
                 <div className='player-position'>
                   Player Position: {player.position}
                 </div>
-                <button
-                  onClick = {event => {
-                    this.showDetail(event, player)
-                  }}
-                >
-                  Click here to view player detail
-                </button>
+                <div>
+                  Select anywhere in this shaded area to view player detail
+                </div>
               </div>
             </li>
           ))}

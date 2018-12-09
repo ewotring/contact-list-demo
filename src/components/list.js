@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Image from './image'
 
 class List extends Component {
   render() {
@@ -22,9 +23,10 @@ class List extends Component {
             <div>
               Player Name: {player.name}
             </div>
-            <div>
+            {/* <div>
               Player Image: {player.image_url}
-            </div>
+            </div> */}
+            <Image image_url = { player.image_url } />
             <div>
               Player Position: {player.position}
             </div>

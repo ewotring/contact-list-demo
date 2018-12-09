@@ -1,0 +1,33 @@
+  .player-detail {
+    // position: relative;
+    // overflow: auto;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #b3b3b3;
+    border-radius: 5px;
+    cursor: pointer;
+    .player-image,
+    .placeholder-image {
+      // position: absolute;
+      // left: 0;
+      // float: left;
+      margin: 1%;
+    }
+    .player-content {
+      text-align: left;
+      padding: 2%;
+      .player-name {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .player-position {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
